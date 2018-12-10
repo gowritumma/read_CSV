@@ -1,0 +1,17 @@
+<div> 
+
+<%= form_for :uploaded_file, :html=>{:multipart=>true}, :url => readcsv_path do |f| %>
+  <p>
+    <b>Upload a CSV file to show the duplicate and non duplicate records.</b><br>
+    <label for="file">File to Upload</label> <b> <%= f.file_field :uploaded_file%></b>
+    <p class="error" ><%= flash[:error] %></p>
+  </p>
+  <p>
+    <%= f.submit "sort the Duplicates" %>
+  </p>
+<% end %>
+</div>
+
+
+
+</script>

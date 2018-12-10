@@ -1,0 +1,46 @@
+<div>
+    <h4><%= link_to "Home", root_path %></h4></br>
+    <h3> Duplicates records in the csv file are : </h3>  
+</div>
+</br>
+<div>
+<table class="TFtable">
+<%  @duplicates.each do |dup| %>
+<tr>
+	<td><%= dup[0] %></td>
+	<td><%= dup[1] %></td>
+	<td><%= dup[2] %></td>
+	<td><%= dup[3] %></td>
+	<td><%= dup[4] %></td>
+	<td><%= dup[5] %></td>
+	<td><%= dup[6] %></td>
+	<td><%= dup[7] %></td>
+	<td><%= dup[8] %></td>
+	<td><%= dup[9] %></td>
+	<td><%= dup[10] %></td>
+	<td><%= dup[11] %></td>
+
+</tr>
+<% end %>
+</table>
+<table class="TFtable">
+<h3> Unique records in the file : </h3>
+<% @nonduplicates.each do |nondup| %>
+<tr>
+	<td><%= nondup[0] %></td>
+	<td><%= nondup[1] %></td>
+	<td><%= nondup[2] %></td>
+	<td><%= nondup[3] %></td>
+	<td><%= nondup[4] %></td>
+	<td><%= nondup[5] %></td>
+	<td><%= nondup[6] %></td>
+	<td><%= nondup[7] %></td>
+	<td><%= nondup[8] %></td>
+	<td><%= nondup[9] %></td>
+	<td><%= nondup[10] %></td>
+	<td><%= nondup[11] %></td>
+
+</tr>
+<% end %>
+</table>
+</div>
