@@ -48,8 +48,6 @@ end
 
 def compareDuplicates(prev_rec, next_rec)
 	ld = Class.new.extend(Gem::Text).method(:levenshtein_distance)
-	puts "previous record " + prev_rec[4]
-	puts "next_rec  " + next_rec[4]
 	# if the records are completely duplicate
 	if(ld.call(prev_rec[1].to_s, next_rec[1].to_s) == 0 && ld.call(prev_rec[3].to_s, next_rec[3].to_s) == 0 && ld.call(prev_rec[5].to_s, next_rec[5].to_s) == 0)
 		#check if address2 is nill
