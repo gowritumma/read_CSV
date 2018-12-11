@@ -1,3 +1,4 @@
+# find_duplicates.rb is in lib which seperates the duplicates.
 require 'find_duplicates'
 
 class ApplicationController < ActionController::Base
@@ -8,9 +9,9 @@ class ApplicationController < ActionController::Base
   end
 
   def readcsv
-  	puts "render the duplicates"
+  	# check if the csv file is selected or not
   	if(params[:uploaded_file].nil?)
-  		puts "nil class"
+  		# redirect with error if no file is selected
   	redirect_to root_path, :flash => { :error => "Please select a file to upload." }
   	else	
   	# get the file path
@@ -21,7 +22,7 @@ class ApplicationController < ActionController::Base
   	test.readCSV(file.path)
   	@duplicates = test.duplicateArray
   	@nonduplicates = test.nonDuplicateArray
-  	
   	end
   end
+
 end
