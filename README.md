@@ -5,13 +5,13 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version 2.4.1
 
 * System dependencies
 
 * Configuration
 
-* Database creation
+* Database creation  - No database required.
 
 * Database initialization
 
@@ -22,3 +22,6 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+# read_CSV
+Repository to read csv files and return the duplicate and nonduplicate records
